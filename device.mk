@@ -18,10 +18,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
-$(call inherit-product-if-exists, vendor/htc/eyeul/eyeul-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/eyeatt/eyeatt-vendor.mk)
 
 # overlays
-DEVICE_PACKAGE_OVERLAYS += device/htc/eyeul/overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/eyeatt/overlay
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
@@ -70,7 +70,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
-    device/htc/eyeul/configs/com.htc.software.market.xml:system/etc/permissions/com.htc.software.market.xml
+    device/htc/eyeatt/configs/com.htc.software.market.xml:system/etc/permissions/com.htc.software.market.xml
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -158,9 +158,9 @@ PRODUCT_COPY_FILES += \
 
 # NFC
 ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := device/htc/eyeul/configs/nfcee_access.xml
+    NFCEE_ACCESS_PATH := device/htc/eyeatt/configs/nfcee_access.xml
 else
-    NFCEE_ACCESS_PATH := device/htc/eyeul/configs/nfcee_access_debug.xml
+    NFCEE_ACCESS_PATH := device/htc/eyeatt/configs/nfcee_access_debug.xml
 endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml

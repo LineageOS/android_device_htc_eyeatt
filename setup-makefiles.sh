@@ -99,7 +99,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifneq (\$(filter eyeul,\$(TARGET_DEVICE)),)
+ifneq (\$(filter eyeatt,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff

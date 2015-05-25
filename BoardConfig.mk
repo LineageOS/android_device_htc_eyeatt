@@ -25,7 +25,7 @@
 # 0PFH11000 - Europe/International
 # 0PFH20000 - Asia Taiwan
 
-TARGET_OTA_ASSERT_DEVICE := htc_eyeul_att,eyeul
+TARGET_OTA_ASSERT_DEVICE := htc_eyeul_att
 
 BOARD_VENDOR := htc
 
@@ -54,7 +54,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 --tags_offset 0x01e00000
-BOARD_CUSTOM_BOOTIMG_MK := device/htc/eyeul/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/htc/eyeatt/mkbootimg.mk
 TARGET_KERNEL_CONFIG := cm_eyeul_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
 
@@ -63,7 +63,7 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Audio
 AUDIO_FEATURE_DISABLED_MULTI_VOICE_SESSIONS := true
-# BOARD_AUDIO_AMPLIFIER := device/htc/eyeul/libaudioamp
+# BOARD_AUDIO_AMPLIFIER := device/htc/eyeatt/libaudioamp
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 AUDIO_FEATURE_ENABLED_FM := true
@@ -74,7 +74,7 @@ AUDIO_FEATURE_ENABLED_LOW_LATENCY_CAPTURE := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/eyeul/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/eyeatt/bluetooth
 
 # Camera
 COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
@@ -88,7 +88,7 @@ BOARD_CHARGING_MODE_BOOTING_LPM := /sys/htc_lpm/lpm_mode
 EXTENDED_FONT_FOOTPRINT := true
 
 # Graphics
-BOARD_EGL_CFG := device/htc/eyeul/configs/egl.cfg
+BOARD_EGL_CFG := device/htc/eyeatt/configs/egl.cfg
 TARGET_USES_ION := true
 TARGET_USES_OVERLAY := true
 USE_OPENGL_RENDERER := true
@@ -98,7 +98,7 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
 # Includes
-TARGET_SPECIFIC_HEADER_PATH := device/htc/eyeul/include
+TARGET_SPECIFIC_HEADER_PATH := device/htc/eyeatt/include
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -150,12 +150,12 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
-TARGET_RECOVERY_FSTAB := device/htc/eyeul/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/htc/eyeatt/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/htc/eyeul/sepolicy
+BOARD_SEPOLICY_DIRS += device/htc/eyeatt/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     device.te \
@@ -184,4 +184,4 @@ BOARD_SEPOLICY_UNION += \
 # TARGET_RELEASETOOLS_EXTENSIONS := device/htc/eyeul/releasetools
 
 # Hardware
-BOARD_HARDWARE_CLASS := device/htc/eyeul/cmhw
+BOARD_HARDWARE_CLASS := device/htc/eyeatt/cmhw

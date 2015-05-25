@@ -13,7 +13,7 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_DEVICE),eyeul)
+ifeq ($(TARGET_DEVICE),eyeatt)
 
 include $(call all-subdir-makefiles)
 

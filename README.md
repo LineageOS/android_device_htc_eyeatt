@@ -1,4 +1,4 @@
-# Device configuration for HTC Desire Eye (eyeul)
+# Device configuration for HTC Desire Eye - AT&T USA model (eyeatt)
 
 ## Spec Sheet
 
